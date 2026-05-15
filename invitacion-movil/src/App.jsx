@@ -108,7 +108,7 @@ function App() {
 
         .locationButton {
           position: absolute;
-          top: 49.5%;
+          top: 46%;
           left: 50%;
           transform: translateX(-50%);
           width: 40%;
@@ -126,7 +126,7 @@ function App() {
 
         .giftButton {
           position: absolute;
-          top: 72%;
+          top: 68%;
           left: 50%;
           transform: translateX(-50%);
           width: 40%;
@@ -146,7 +146,7 @@ function App() {
 
         .confirmSection {
           position: absolute;
-          bottom: 8%;
+          bottom: 18%;
           left: 50%;
           transform: translateX(-50%);
           width: 68%;
