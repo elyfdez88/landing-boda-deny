@@ -1,4 +1,5 @@
-import fondo from "./assets/fondo-boda.png"
+import fondoDesktop from "./assets/fondo-boda.png"
+import fondoMovil from "./assets/fondo-movil.png"
 
 function App() {
   const telefono = "5213312345678"
@@ -6,7 +7,7 @@ function App() {
   const confirmarAsistencia = (respuesta) => {
     const nombre = document.getElementById("nombre").value || "Invitado"
 
-    const mensaje = `Hola, soy ${nombre}. ${respuesta} a la boda de Angel y alejandra. ¡Gracias por la invitación!`
+    const mensaje = `Hola, soy ${nombre}. ${respuesta} a la boda de Angel y Alejandra. ¡Gracias por la invitación!`
 
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`
 
@@ -17,7 +18,7 @@ function App() {
     <div className="page">
       <div className="invitation">
         <img
-          src={fondo}
+          src={window.innerWidth <= 768 ? fondoMovil : fondoDesktop}
           alt="Invitación"
           className="invitationImage"
         />
@@ -153,28 +154,44 @@ function App() {
           font-family: Georgia, serif;
         }
 
-        @media (max-width: 600px) {
-          .locationButton {
-            padding: 6px 10px;
-            font-size: 10px;
+        @media (max-width: 768px) {
+
+          .invitation {
+            width: 100%;
           }
 
-          .giftButton {
-            padding: 8px 12px;
+          .locationButton {
+            top: 79%;
+            left: 50%;
+            padding: 8px 14px;
             font-size: 11px;
           }
 
+          .giftButton {
+            top: 92%;
+            left: 50%;
+            padding: 10px 16px;
+            font-size: 12px;
+          }
+
+          .confirmBox {
+            width: 90%;
+            margin-top: 20px;
+          }
+
           .confirmButtons {
-            gap: 10px;
+            flex-direction: column;
+            gap: 12px;
           }
 
           .confirmButtons button {
-            font-size: 12px;
-            padding: 12px 8px;
+            font-size: 14px;
+            padding: 14px;
           }
 
           .confirmBox input {
-            font-size: 14px;
+            font-size: 15px;
+            padding: 14px;
           }
         }
       `}</style>
