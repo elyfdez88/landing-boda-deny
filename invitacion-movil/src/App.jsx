@@ -146,13 +146,14 @@ function App() {
 
         .confirmSection {
           position: absolute;
-          bottom: 18%;
+          top: 86%;
           left: 50%;
           transform: translateX(-50%);
           width: 68%;
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 8px;
+          z-index: 20;
         }
 
         .confirmSection input {
@@ -174,6 +175,7 @@ function App() {
             width: 55%;
             margin: auto;
             z-index: 10;
+            top: 84%;
           }
 
         .yesButton{
